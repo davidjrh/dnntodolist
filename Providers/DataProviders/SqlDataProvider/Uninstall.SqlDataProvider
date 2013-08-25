@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}TodoItems] DROP CONSTRAINT [FK_{objectQualifier}ToDoList_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}TodoItems] DROP CONSTRAINT [PK_{objectQualifier}TodoItems]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}TodoItems].[IX_{objectQualifier}TodoItems]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}TodoItems]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}TodoItems_GetTodoItems]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}TodoItems_GetTodoItem]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}TodoItems_AddTodoItem]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}TodoItems_UpdateTodoItem]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}TodoItems_DeleteTodoItem]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

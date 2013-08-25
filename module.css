@@ -1,0 +1,85 @@
+﻿#TodoItemsContainer input[type=text] {
+    width: calc(100% - 105px);
+    font-size: 1.2em;
+}
+
+#TodoItemsContainer input[type=checkbox] {
+    float: left;
+    width: 20px;
+    height: 18px;
+}
+
+#TodoItemsContainer .dnnSecondaryAction {
+    float: right;
+    margin-bottom: 0px;
+    margin-top: -5px;
+}
+
+#TodoItemsContainer .dnnCheckbox {
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+    #TodoItemsContainer input.content[type=text] {
+        display: inline-block;
+        width: calc(100% - 130px);
+        border: 1px solid transparent;
+        display: inline-block;
+        line-height: 20px;
+        height: 20px;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        padding: 0px;
+        margin-bottom: 0px;
+        font-size: 1.0em;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+
+    #TodoItemsContainer input.content[type=text]:focus,
+    #TodoItemsContainer input.content[type=text]:hover {
+        border: 1px solid #aaa;
+        background-color: #FFC;
+    }
+
+    #TodoItemsContainer input.complete[type=text] {
+        text-decoration: line-through;
+    }
+
+    #TodoItemsContainer input.complete[type=text]:focus {
+        text-decoration: none;
+    }
+
+
+#TodoItemsContainer .itemRow {
+    border-bottom: 1px solid darkgray;
+    text-align: left;
+    padding: 9px;
+    background-color: white;
+    line-height: 18px;
+}
+
+#TodoItemsContainer .footer {
+    border-bottom: 1px solid darkgray;
+    text-align: left;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+#TodoItemsContainer .itemCount {
+    font-weight: bold;
+}
+
+#errorlog {
+    color: red;
+    font-weight: bold;
+    padding: 8px;
+    display: inline-block;
+    text-align: left;
+}

@@ -1,0 +1,19 @@
+﻿<style type="text/css">
+<!--
+#ReleaseNotes { white-space: normal; }
+-->
+</style>
+<div id="ReleaseNotes">
+<h5>TodoItems module sample</h5>
+<p>
+	David Rodriguez <br />
+	<a href="mailto:davidjrh@hotmail.com">davidjrh@hotmail.com</a><br />
+	<a href="http://geeks.ms/blogs/davidjrh">http://geeks.ms/blogs/davidjrh</a><br />
+</p>
+<hr/>
+
+<p><strong>Version 1.0.0</strong></p>
+<ul>
+	<li>Simple todolist module sample, using KnockoutJS and DNN WebAPI calls.</li>
+	<li>Azure compatible</li>
+</ul>

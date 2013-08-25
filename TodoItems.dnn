@@ -1,0 +1,86 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="Todo Items" type="Module" version="01.00.00">
+      <friendlyName>Todo Items Sample Module</friendlyName>
+      <description>This is a TodoItems sample module for DNN Platform</description>
+      <iconFile>~/DesktopModules/TodoItems/images/TodoItem.png</iconFile>
+      <owner>
+        <name>David Rodriguez</name>
+        <organization>David Rodriguez</organization>
+        <url>http://geeks.ms/blogs/davidjrh</url>
+        <email>davidjrh@hotmail.com</email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <azureCompatible>true</azureCompatible>
+
+      <dependencies>
+        <dependency type="CoreVersion">07.00.00</dependency>
+      </dependencies>
+      
+      <components>
+        <!-- Database scripts -->
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\TodoItems</basePath>
+            <script type="Install">
+              <path>Providers\DataProviders\SqlDataProvider</path>
+              <name>01.00.00.SqlDataProvider</name>
+              <version>01.00.00</version>
+            </script>
+            <script type="UnInstall">
+              <path>Providers\DataProviders\SqlDataProvider</path>
+              <name>Uninstall.SqlDataProvider</name>
+              <version>01.00.00</version>
+            </script>
+          </scripts>
+        </component>
+
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/TodoItems</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+
+        <component type="Module">
+          <desktopModule>
+            <moduleName>Todo Items</moduleName>
+            <foldername>TodoItems</foldername>
+            <businessControllerClass>DavidRodriguez.Modules.TodoItems.TodoItemsController</businessControllerClass>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Todo Items</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/TodoItems/TodoItems.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                    <supportsPopUps>True</supportsPopUps>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>                        
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <path>bin</path>
+              <name>DavidRodriguez.Modules.TodoItems.dll</name>
+            </assembly>
+          </assemblies>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
