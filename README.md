@@ -7,5 +7,5 @@ The module is Azure Compatible
 
 Screenshot
 ----------
-Follow this link for a module screenshot: <a href="http://cdnstorage.intelequia.com/images/TodoItems.png">Screenshot</a>
+<img src="http://cdnstorage.intelequia.com/images/TodoItems.png" />
 
