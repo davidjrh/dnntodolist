@@ -9,3 +9,7 @@ Screenshot
 ----------
 <img src="http://cdnstorage.intelequia.com/images/TodoItems.png" />
 
+Download
+--------
+You can download the install packages from the <a href="https://github.com/davidjrh/dnntodolist/tree/master/packages">packages folder</a>.
+
