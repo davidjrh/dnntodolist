@@ -83,6 +83,7 @@ namespace DavidRodriguez.Modules.TodoItems.Components
         /// <history> 
         /// </history> 
         /// ----------------------------------------------------------------------------- 
+        [ValidateAntiForgeryToken]
         [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]        
         [HttpPost]
         public HttpResponseMessage Add(TodoItem todoItem)
@@ -114,6 +115,7 @@ namespace DavidRodriguez.Modules.TodoItems.Components
         /// <history> 
         /// </history> 
         /// ----------------------------------------------------------------------------- 
+        [ValidateAntiForgeryToken]
         [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
         [HttpPost]
         public HttpResponseMessage Update(TodoItem todoItem)
@@ -152,6 +154,7 @@ namespace DavidRodriguez.Modules.TodoItems.Components
         /// <history> 
         /// </history> 
         /// ----------------------------------------------------------------------------- 
+        [ValidateAntiForgeryToken]
         [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]        
         [HttpPost]
         public HttpResponseMessage Remove(TodoItem todoItem)

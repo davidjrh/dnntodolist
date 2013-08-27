@@ -65,6 +65,7 @@ dnn.extend(djrh.TodoItems,
                 $.ajax({
                     url: url,
                     beforeSend: setHeaders,
+                    cache: false,
                     contentType: 'application/json; charset=UTF-8',
                     type: method,
                     data: parameters ? ko.toJSON(parameters) : null,

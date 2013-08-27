@@ -24,7 +24,6 @@ if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwne
 
 		ALTER TABLE {databaseOwner}[{objectQualifier}TodoItems] ADD CONSTRAINT [PK_{objectQualifier}TodoItems] PRIMARY KEY CLUSTERED ([ItemID])
 		CREATE NONCLUSTERED INDEX [IX_{objectQualifier}TodoItems] ON {databaseOwner}[{objectQualifier}TodoItems] ([ModuleID])
-
 		ALTER TABLE {databaseOwner}[{objectQualifier}TodoItems] WITH NOCHECK ADD CONSTRAINT [FK_{objectQualifier}TodoItems_{objectQualifier}Modules] FOREIGN KEY ([ModuleID]) REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE
 	END
 GO

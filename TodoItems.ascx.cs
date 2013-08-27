@@ -43,6 +43,7 @@ namespace DavidRodriguez.Modules.TodoItems
             Load += Page_Load;
             jQuery.RequestDnnPluginsRegistration();
             ServicesFramework.Instance.RequestAjaxScriptSupport();
+            ServicesFramework.Instance.RequestAjaxAntiForgerySupport();
         }
         /// ----------------------------------------------------------------------------- 
         /// <summary> 
