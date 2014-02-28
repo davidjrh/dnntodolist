@@ -7,7 +7,7 @@
 <!-- ko with: dnn.modules.todoitems -->
 <div id="TodoItemsContainer">
     <input id="newItemContent" type="text" />
-    <input id="addItem" type="submit" class="dnnPrimaryAction" value="Add" data-bind="click: addItem" placeholder='Enter new task' />
+    <input id="addItem" type="submit" class="dnnPrimaryAction" value="Add" data-bind="click: addItem, clickBubble: false" placeholder='Enter new task' />
     <!-- ko foreach: items -->        
         <div class="itemRow">
             <input id="chkComplete" type="checkbox" data-bind="change: update, checked: complete, click: update" class="dnnCheckbox" />                
