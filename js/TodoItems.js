@@ -53,18 +53,14 @@ dnn.extend(djrh.TodoItems,
             
             this.items = ko.observableArray();
             this.loading = ko.observable(true);
-            
-            function setHeaders(xhr) {
-                sf.setModuleHeaders(xhr);
-            }
-           
+
             function ajax(webapimethod, parameters, success, failure, complete, method) {
                 $("#errorlog").text("");
                 var url = sf.getServiceRoot('TodoItems') + 'TodoItems/' + webapimethod;
                 method = method || "GET";
                 $.ajax({
                     url: url,
-                    beforeSend: setHeaders,
+                    beforeSend: $.dnnSF(dnn.getVar("moduleId")).setModuleHeaders,
                     cache: false,
                     contentType: 'application/json; charset=UTF-8',
                     type: method,
@@ -113,7 +109,6 @@ dnn.extend(djrh.TodoItems,
                     );
                 }
                 textbox.val('').focus();
-                evt.preventDefault();
             };
 
             this.refresh();
